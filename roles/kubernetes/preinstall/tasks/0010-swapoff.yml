@@ -14,7 +14,11 @@
   register: swapon
   changed_when: false
 
-- name: Disable swap
+- debug:
+    var: swapon
+
+
+- name: Disable swapon
   command: /sbin/swapoff -a
   when:
     - swapon is defined
