@@ -21,5 +21,5 @@
 - name: Disable swapon
   command: /sbin/swapoff -a
   when:
-    - swapon is defined
     - swapon.stdout
+  check_mode: no
